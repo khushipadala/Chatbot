@@ -39,8 +39,6 @@ def get_config(config_file='seq2seq.ini'):
     _conf_strings = [ (key, str(value)) for key,value in parser.items('strings') ]
     return dict(_conf_ints + _conf_floats + _conf_strings)
 
-# We use a number of buckets and pad to the closest one for efficiency.
-# See seq2seq_model.Seq2SeqModel for details of how they work.
 _buckets = [(5, 10), (10, 15), (20, 25), (40, 50)]
 
 
